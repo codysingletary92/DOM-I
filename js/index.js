@@ -40,3 +40,45 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navBar = document.querySelector("nav");
+navLength = Object.keys(siteContent["nav"]).length;
+
+for (i = 0; i <= 5; i++){
+  navBar.children[i].innerHTML = Object.values(siteContent.nav)[i]
+}
+
+let navImg = document.getElementById("cta-img")
+navImg.src = siteContent.cta["img-src"]
+
+let cta = document.querySelector(".cta")
+cta.children[0].children[0].innerHTML = siteContent.cta["h1"]
+cta.children[0].children[1].innerHTML = siteContent.cta["button"]
+
+let topContent = document.querySelector(".top-content")
+
+topContent.children[0].children[0].innerHTML = siteContent["main-content"]["features-h4"]
+topContent.children[0].children[1].innerHTML = siteContent["main-content"]["features-content"]
+topContent.children[1].children[0].innerHTML = siteContent["main-content"]["about-h4"]
+topContent.children[1].children[1].innerHTML = siteContent["main-content"]["about-content"]
+
+let middleImg = document.querySelector(".middle-img")
+middleImg.src = siteContent["main-content"]["middle-img-src"]
+
+let bottomContent = document.querySelector(".bottom-content")
+bottomContent.children[0].children[0].innerHTML = siteContent["main-content"]["services-h4"]
+bottomContent.children[0].children[1].innerHTML = siteContent["main-content"]["services-content"]
+bottomContent.children[1].children[0].innerHTML = siteContent["main-content"]["product-h4"]
+bottomContent.children[1].children[1].innerHTML = siteContent["main-content"]["product-content"]
+bottomContent.children[2].children[0].innerHTML = siteContent["main-content"]["vision-h4"]
+bottomContent.children[2].children[1].innerHTML = siteContent["main-content"]["vision-content"]
+
+let contact = document.querySelector(".contact")
+contact.children[0].innerHTML = siteContent["contact"]["contact-h4"]
+contact.children[1].innerHTML = siteContent["contact"]["address"]
+contact.children[2].innerHTML = siteContent["contact"]["phone"]
+contact.children[3].innerHTML = siteContent["contact"]["email"]
+
+let footer = document.querySelector("footer")
+console.log(footer)
+footer.children[0].innerHTML = siteContent["footer"]["copyright"]
